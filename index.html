@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchPad&API</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+
+<style>
+    body{background-color:rgb(0, 0, 0) ;
+    color:rgb(72, 235, 162); 
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10cm;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+	<h1 id="testelm"> Number Facts ! </h1><br>
+    <h2>ConsoleLog to see facts about random numbers</h2>
+
+
+</body>
+</html>
+
+<script>
+numberFacts();
+function numberFacts() {
+    const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+		"X-RapidAPI-Key": "f168e230afmshbf08e29ad143203p1c5c43jsnc7e3d46f920c"
+	}
+};
+
+   
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});  
+}
+
+</script>
